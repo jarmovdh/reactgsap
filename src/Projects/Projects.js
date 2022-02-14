@@ -1,8 +1,8 @@
 import React from "react";
 import Header from "../Header/Header";
-import "./Home.css";
+import "./Projects.css";
 
-function Home() {
+function Projects() {
   return (
     <div>
       <Header />
@@ -10,4 +10,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Projects;

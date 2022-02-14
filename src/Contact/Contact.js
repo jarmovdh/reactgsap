@@ -1,8 +1,8 @@
 import React from "react";
 import Header from "../Header/Header";
-import "./Home.css";
+import "./Contact.css";
 
-function Home() {
+function Contact() {
   return (
     <div>
       <Header />
@@ -10,4 +10,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Contact;
