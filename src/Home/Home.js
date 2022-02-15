@@ -12,7 +12,7 @@ function Home() {
       <Header />
       <div className="container">
         <div className="container1">
-          <div className="text-line" id="qvstudio">
+          <div className="txt-line" id="qvstudio">
             <p>QV STUDIO</p>
           </div>
           <div className="txt-line line-bottom" id="agency">
