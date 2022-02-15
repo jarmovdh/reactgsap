@@ -5,6 +5,8 @@ import flower from "../Assets/flower.svg";
 import another from "../Assets/another.svg";
 import arrow from "../Assets/arrow.svg";
 import { Link } from "react-router-dom";
+import GetInTouch from "../GetInTouch/GetInTouch";
+import Footer from "../Footer/Footer";
 
 function Home() {
   return (
@@ -79,7 +81,7 @@ function Home() {
             <p>___</p>
           </div>
           <div className="skill-set-box">
-            <h1 className="skill-set-box-h1">SCSS</h1>
+            <h1 className="skill-set-box-h1">CSS</h1>
             <p className="skill-set-box-p">
               Adding style and design to browsers
             </p>
@@ -122,6 +124,18 @@ function Home() {
             </p>
             <p>___</p>
           </div>
+          <div className="skill-set-box">
+            <h1 className="skill-set-box-h1">Shopify Liquid</h1>
+            <p className="skill-set-box-p">For building E-Commerce platforms</p>
+            <p>___</p>
+          </div>
+          <div className="skill-set-box">
+            <h1 className="skill-set-box-h1">Figma</h1>
+            <p className="skill-set-box-p">
+              For UI/UX designs and webiste prototype designs
+            </p>
+            <p>___</p>
+          </div>
         </div>
         <div className="project-and-work">
           <h1>
@@ -132,6 +146,8 @@ function Home() {
           <br />
           <p>Click here</p>
         </div>
+        <GetInTouch />
+        <Footer />
       </div>
     </div>
   );

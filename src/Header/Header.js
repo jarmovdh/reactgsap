@@ -9,7 +9,7 @@ function Header() {
       <header>
         <div id="logo"></div>
         <div className="toggle-menu">
-          <img src="{MenuIcon}" alt="" />
+          <img src={MenuIcon} alt="" />
         </div>
         <ul className="menu-items">
           <li>
