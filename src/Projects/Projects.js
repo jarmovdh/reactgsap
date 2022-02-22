@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import Header from "../Header/Header";
 import "./Projects.css";
 import arrow from "../Assets/arrow.svg";
 import GetInTouch from "../GetInTouch/GetInTouch";
 import Footer from "../Footer/Footer";
+import gsap from "gsap";
 function Projects() {
+  const timeline_project = gsap.timeline();
+  let text = useRef(null);
+  useEffect(() => {});
   return (
     <div>
       <Header />
