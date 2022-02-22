@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Header from "../Header/Header";
 import "./Home.css";
 import flower from "../Assets/flower.svg";
@@ -7,24 +7,53 @@ import arrow from "../Assets/arrow.svg";
 import { Link } from "react-router-dom";
 import GetInTouch from "../GetInTouch/GetInTouch";
 import Footer from "../Footer/Footer";
+import gsap from "gsap";
 
 function Home() {
+  let text1 = useRef(null);
+  let text2 = useRef(null);
+  let text3 = useRef(null);
+  let text4 = useRef(null);
+  let p1 = useRef(null);
+
+  const timeline_home = gsap.timeline();
+  useEffect(() => {
+    timeline_home.from(
+      [text1, text2, text3, text4],
+      {
+        duration: 1,
+        skewY: 15,
+        y: 400,
+        stagger: {
+          amount: 0.2,
+        },
+      },
+      "-=1.2"
+    );
+    timeline_home.from(p1, {
+      duration: 0.6,
+      x: -100,
+      delay: 0.2,
+      opacity: 0,
+    });
+  });
+
   return (
     <div className="home">
-      <Header />
+      <Header timeline={timeline_home} />
       <div className="container">
         <div className="container1">
           <div className="txt-line" id="qvstudio">
-            <p>QV STUDIO</p>
+            <p ref={(el) => (text1 = el)}>QV STUDIO</p>
           </div>
           <div className="txt-line line-bottom" id="agency">
-            <p>agency</p>
+            <p ref={(el) => (text2 = el)}>agency</p>
           </div>
         </div>
         <div></div>
       </div>
       <div className="left-side-quote">
-        <p>
+        <p ref={(el) => (p1 = el)}>
           We create digital experiences by combining <br />
           webdesgin, content and strategy, <br /> that move brands forward.
         </p>
@@ -33,10 +62,10 @@ function Home() {
         <div></div>
         <div className="container1">
           <div className="txt-line" id="digital">
-            <p>Digital</p>
+            <p ref={(el) => (text3 = el)}>Digital</p>
           </div>
           <div className="txt-line linebottom" id="designer">
-            <p>Designer</p>
+            <p ref={(el) => (text4 = el)}>Designer</p>
           </div>
         </div>
       </div>
