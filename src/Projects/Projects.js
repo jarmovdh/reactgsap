@@ -7,20 +7,36 @@ import Footer from "../Footer/Footer";
 import gsap from "gsap";
 function Projects() {
   const timeline_project = gsap.timeline();
-  let text = useRef(null);
-  useEffect(() => {});
+  let text1 = useRef(null);
+  let itemsProject = useRef(null);
+  useEffect(() => {
+    timeline_project.from(
+      text1,
+      {
+        duration: 1,
+        skewY: 10,
+        y: 500,
+        stagger: {
+          amount: 0.4,
+        },
+        opacity: 0,
+      },
+      "-=1.5"
+    );
+    timeline_project.from(itemsProject, { duration: 0.5, opacity: 0, y: 100 });
+  });
   return (
     <div>
-      <Header />
+      <Header timeline={timeline_project} />
       <div className="project-page">
         <div className="my-projects">
-          <h1>
+          <h1 ref={(el) => (text1 = el)}>
             my <br />
             projects
           </h1>
         </div>
         <div className="project-page-container">
-          <div className="project-page-items">
+          <div className="project-page-items" ref={(el) => (itemsProject = el)}>
             <div className="project-page-item">
               <div className="project-page-item-number">
                 <p>01/06</p>
