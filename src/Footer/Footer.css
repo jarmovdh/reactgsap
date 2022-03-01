@@ -87,13 +87,13 @@
   animation: animation-reel 60s infinite linear;
 }
 .footer-ticker- {
-}
-@keyframes animation-reel {
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(-100%);
+  @keyframes animation-reel {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
   }
 }
 
